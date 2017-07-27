@@ -1,0 +1,22 @@
+<div class="restaurants-wrapper" ng-controller="mainController">
+  <div class="homepage-title">FoodiE</div>
+  <div class="homepage-image"><p>Find the best restaurants, cafes and bars.</p></div>
+  <input type="text" placeholder="Search for restaurants or cuisines...." ng-model="searchbox">
+  <div class="restaurant-details" ng-repeat="restaurant in restaurants | filter:searchbox">
+    <div class="restaurant-image"><img ng-src="{{restaurant.image}}"></div>
+    <div class="restaurant-info">
+      <a ng-href="#!/restaurant/{{restaurant.id}}"><h2>{{restaurant.name}}</h2></a>
+      <b>{{restaurant.location}}</b><br>
+      {{restaurant.address}}<hr>
+    </div>
+    <div class="restaurant-about">
+      <b>Ratings:{{restaurant.vote}}</b><br>
+      Cuisines: {{restaurant.cuisines}}<br>
+      Cost For Two:₹{{restaurant.cost | number}}<br>
+      Timmings:{{restaurant.timmings}}
+      <div class="bestDish" ng-if="restaurant.bestDish"><small>Recommended:<span>{{restaurant.bestDish.name}} </span>
+	        <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div> </small>
+      </div>
+    </div>
+  </div>
+</div>

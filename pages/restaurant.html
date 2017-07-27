@@ -1,0 +1,23 @@
+<div class="restaurant" ng-if="restaurant.name" ng-controller="restaurantController">
+  <div class="restaurant-details">
+    <div class="restaurant-image"><img ng-src="{{restaurant.image}}"></div>
+    <div class="restaurant-info">
+      <h2>{{restaurant.name}}</h2>
+      <b>{{restaurant.location}}</b><br>
+      {{restaurant.address}}<hr>
+    </div>
+    <div class="restaurant-about">
+      <b>Ratings:{{restaurant.vote}}</b><br>
+      Cuisines: {{restaurant.cuisines}}<br>
+      Cost For Two:₹{{restaurant.cost | number}}<br>
+      Timmings:{{restaurant.timmings}}
+    </div>
+  </div>
+</div>
+<div ng-if="ingredients">
+    <ol>
+    <li ng-repeat="ingredient in ingredients">
+    {{ingredient}}
+    </li>
+    </ol>
+</div>
