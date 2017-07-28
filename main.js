@@ -23,80 +23,85 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 	$scope.ingredients = [];
 	$scope.getIngredients = function(url) {
 	var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
-	$http({
-		'method': 'POST',
-		'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
-		'headers': {
-			'Authorization': 'Key YOUR_API_KEY',
-			'Content-Type': 'application/json'
-		},
-		'data': data
-	}).then(function (response) {
-			var ingredients = response.data.outputs[0].data.concepts;
-			for (var i =0;i < ingredients.length;i++) {
-			$scope.ingredients.push(ingredients[i].name);
-			}
-		}, function (xhr) {
-        	console.log(xhr);
-        })
-	}
+		$http({
+			'method': 'POST',
+			'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
+			'headers': {
+				'Authorization': 'Key YOUR_API_KEY',
+				'Content-Type': 'application/json'
+			},
+			'data': data
+		}).then(function (response) {
+				var ingredients = response.data.outputs[0].data.concepts;
+				for (var i =0;i < ingredients.length;i++) {
+				$scope.ingredients.push(ingredients[i].name);
+				}
+			}, function (xhr) {
+	        	console.log(xhr);
+	        })
+		}
 	$scope.restaurantId = $routeParams.id;
 		var restaurants = [
-		{
-			name: 'Burger King',
-			address: 'E-8, Inner Circle, Connaught Place, New Delhi',
-			location: 'Connaught Place',
-			category: 'Quick Bites',
-			vote: '3.8',
-			cuisines: 'Burger, Fast Food',
-			cost: '500',
-			timmings: '10 AM to 11 PM (Mon-Sun)',
-			image: '/images/rest1.jpg'
-		},
-		{
-			name: 'Yeti - The Himalayan Kitchen',
-			address: '30, 1st Floor, Hauz Khas Village, New Delhi',
-			location: 'Hauz Khas Village',
-			category: 'Casual Dining',
-			vote: '4.9',
-			cuisines: 'Tibetan, Nepalese',
-			cost: '1300',
-			timmings: '12 Noon to 11:30 PM (Mon-Sun)',
-			image: '/images/rest2.jpg'
-		},
-		{
-			name: 'Prime Street Cake',
-			address: '12 & 13, F Block, Inner Circle, Connaught Place, New Delhi',
-			location: 'Connaught Place',
-			category: 'Casual Dining',
-			vote: '3.6',
-			cuisines: 'North Indian, Continental, Mexican, Italian, Chinese',
-			cost: '1000',
-			timmings: '12 Noon to 1 AM (Mon-Sun)',
-			image: '/images/rest3.jpg'
-		},
-		{
-			name: 'Peninsular Kitchen',
-			address: 'Level 3, Ambience Mall, Vasant Kunj, New Delhi',
-			location: 'Vasant Kunj',
-			category: 'Casual Dining',
-			vote: '4.1',
-			cuisines: 'Seafood, South Indian, Andhra, Hyderabadi, Goan',
-			cost: '1500',
-			timmings: '11 AM to 12 Midnight (Mon-Sun)',
-			image: '/images/rest4.jpg'
-		},
-		{
-			name: 'Chor Bizarre',
-			address: 'Bikaner House, Near India Gate, Pandara Road Market, New Delhi',
-			location: 'Pandara Road Market',
-			category: 'Casual Dining',
-			vote: '4.5',
-			cuisines: 'North Indian',
-			cost: '1600',
-			timmings: '12 Noon to 3:30 PM, 7 PM to 11:30 PM (Mon-Sun)',
-			image: '/images/rest5.jpg'
-		}]
+			{
+				name: 'Burger King',
+				address: 'E-8, Inner Circle, Connaught Place, New Delhi',
+				location: 'Connaught Place',
+				category: 'Quick Bites',
+				vote: '3.8',
+				cuisines: 'Burger, Fast Food',
+				cost: '500',
+				hours: '10 AM to 11 PM (Mon-Sun)',
+				phone: '011-33106219',
+				image: '/images/rest1.jpg'
+			},
+			{
+				name: 'Yeti - The Himalayan Kitchen',
+				address: '30, 1st Floor, Hauz Khas Village, New Delhi',
+				location: 'Hauz Khas Village',
+				category: 'Casual Dining',
+				vote: '4.9',
+				cuisines: 'Tibetan, Nepalese',
+				cost: '1300',
+				hours: '12 Noon to 11:30 PM (Mon-Sun)',
+				phone:'011-33106044',
+				image: '/images/rest2.jpg'
+			},
+			{
+				name: 'Prime Street Cake',
+				address: '12 & 13, F Block, Inner Circle, Connaught Place, New Delhi',
+				location: 'Connaught Place',
+				category: 'Casual Dining',
+				vote: '3.6',
+				cuisines: 'North Indian, Continental, Mexican, Italian, Chinese',
+				cost: '1000',
+				hours: '12 Noon to 1 AM (Mon-Sun)',
+				phone:'011-43596623',
+				image: '/images/rest3.jpg'
+			},
+			{
+				name: 'Peninsular Kitchen',
+				address: 'Level 3, Ambience Mall, Vasant Kunj, New Delhi',
+				location: 'Vasant Kunj',
+				category: 'Casual Dining',
+				vote: '4.1',
+				cuisines: 'Seafood, South Indian, Andhra, Hyderabadi, Goan',
+				cost: '1500',
+				hours: '11 AM to 12 Midnight (Mon-Sun)',
+				phone:'011-33105823',
+				image: '/images/rest4.jpg'
+			},
+			{
+				name: 'Chor Bizarre',
+				address: 'Bikaner House, Near India Gate, Pandara Road Market, New Delhi',
+				location: 'Pandara Road Market',
+				category: 'Casual Dining',
+				vote: '4.5',
+				cuisines: 'North Indian',
+				cost: '1600',
+				hours: '12 Noon to 3:30 PM, 7 PM to 11:30 PM (Mon-Sun)',
+				phone:'011-33105872',
+				image: '/images/rest5.jpg'
+			}]
 	$scope.restaurant = restaurants[$routeParams.id - 1];
 });
 foodieApp.controller('mainController',function($scope){
@@ -110,7 +115,8 @@ foodieApp.controller('mainController',function($scope){
 			vote: '3.8',
 			cuisines: 'Burger, Fast Food',
 			cost: '500',
-			timmings: '10 AM to 11 PM (Mon-Sun)',
+			hours: '10 AM to 11 PM (Mon-Sun)',
+			phone: '011-33106219',
 			image: '/images/rest1.jpg',
 			bestDish: {
 				name: 'Corn Pizza',
@@ -126,7 +132,8 @@ foodieApp.controller('mainController',function($scope){
 			vote: '4.9',
 			cuisines: 'Tibetan, Nepalese',
 			cost: '1300',
-			timmings: '12 Noon to 11:30 PM (Mon-Sun)',
+			hours: '12 Noon to 11:30 PM (Mon-Sun)',
+			phone:'011-33106044',
 			image: '/images/rest2.jpg'
 		},
 		{
@@ -138,7 +145,8 @@ foodieApp.controller('mainController',function($scope){
 			vote: '3.6',
 			cuisines: 'North Indian, Continental, Mexican, Italian, Chinese',
 			cost: '1000',
-			timmings: '12 Noon to 1 AM (Mon-Sun)',
+			hours: '12 Noon to 1 AM (Mon-Sun)',
+			phone:'011-43596623',
 			image: '/images/rest3.jpg'
 		},
 		{
@@ -150,7 +158,8 @@ foodieApp.controller('mainController',function($scope){
 			vote: '4.1',
 			cuisines: 'Seafood, South Indian, Andhra, Hyderabadi, Goan',
 			cost: '1500',
-			timmings: '11 AM to 12 Midnight (Mon-Sun)',
+			hours: '11 AM to 12 Midnight (Mon-Sun)',
+			phone:'011-33105823',
 			image: '/images/rest4.jpg'
 		},
 		{
@@ -162,7 +171,8 @@ foodieApp.controller('mainController',function($scope){
 			vote: '4.5',
 			cuisines: 'North Indian',
 			cost: '1600',
-			timmings: '12 Noon to 3:30 PM, 7 PM to 11:30 PM (Mon-Sun)',
+			hours: '12 Noon to 3:30 PM, 7 PM to 11:30 PM (Mon-Sun)',
+			phone:'011-33105872',
 			image: '/images/rest5.jpg'
 		}]
 });
