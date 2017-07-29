@@ -52,7 +52,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '500',
 				hours: '10 AM to 11 PM (Mon-Sun)',
 				phone: '011-33106219',
-				image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp'
+				image: '/images/rest1.jpg'
 			},
 			{
 				name: 'Yeti - The Himalayan Kitchen',
@@ -64,7 +64,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1300',
 				hours: '12 Noon to 11:30 PM (Mon-Sun)',
 				phone:'011-33106044',
-				image: 'images/rest2.jpg'
+				image: '/images/rest2.jpg'
 			},
 			{
 				name: 'Prime Street Cake',
