@@ -64,7 +64,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1300',
 				hours: '12 Noon to 11:30 PM (Mon-Sun)',
 				phone:'011-33106044',
-				image: '/images/rest2.jpg'
+				image: 'images/rest2.jpg'
 			},
 			{
 				name: 'Prime Street Cake',
