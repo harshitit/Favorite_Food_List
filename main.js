@@ -117,7 +117,7 @@ foodieApp.controller('mainController',function($scope){
 			cost: '500',
 			hours: '10 AM to 11 PM (Mon-Sun)',
 			phone: '011-33106219',
-			image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp',
+			image: '/images/rest1.JPG',
 			bestDish: {
 				name: 'Corn Pizza',
 				image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
