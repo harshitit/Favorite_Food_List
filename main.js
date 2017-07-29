@@ -52,7 +52,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '500',
 				hours: '10 AM to 11 PM (Mon-Sun)',
 				phone: '011-33106219',
-				image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp'
+				image: '/images/rest1.JPG'
 			},
 			{
 				name: 'Yeti - The Himalayan Kitchen',
@@ -64,7 +64,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1300',
 				hours: '12 Noon to 11:30 PM (Mon-Sun)',
 				phone:'011-33106044',
-				image: 'https://b.zmtcdn.com/data/res_imagery/18466957_RESTAURANT_8ede6ee959521ff9b2c6946b21613f80.jpg?output-format=webp'
+				image: '/images/rest2.JPG'
 			},
 			{
 				name: 'Prime Street Cake',
@@ -76,7 +76,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1000',
 				hours: '12 Noon to 1 AM (Mon-Sun)',
 				phone:'011-43596623',
-				image: 'https://b.zmtcdn.com/data/res_imagery/309705_RESTAURANT_906426943ab0afe7711dc5939a21c234.jpg?output-format=webp'
+				image: '/images/rest3.JPG'
 			},
 			{
 				name: 'Peninsular Kitchen',
@@ -88,7 +88,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1500',
 				hours: '11 AM to 12 Midnight (Mon-Sun)',
 				phone:'011-33105823',
-				image: 'https://b.zmtcdn.com/data/res_imagery/312300_RESTAURANT_70cd4d8448a38b2d38017a1736a60996.jpg?output-format=webp'
+				image: '/images/rest4.JPG'
 			},
 			{
 				name: 'Chor Bizarre',
@@ -100,7 +100,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1600',
 				hours: '12 Noon to 3:30 PM, 7 PM to 11:30 PM (Mon-Sun)',
 				phone:'011-33105872',
-				image: 'https://b.zmtcdn.com/data/res_imagery/18421051_RESTAURANT_91a8e98f63efbb5d09001e19bf9c31e9.jpg?output-format=webp'
+				image: '/images/rest5.JPG'
 			}]
 	$scope.restaurant = restaurants[$routeParams.id - 1];
 });
@@ -134,7 +134,7 @@ foodieApp.controller('mainController',function($scope){
 			cost: '1300',
 			hours: '12 Noon to 11:30 PM (Mon-Sun)',
 			phone:'011-33106044',
-			image: 'https://b.zmtcdn.com/data/res_imagery/18466957_RESTAURANT_8ede6ee959521ff9b2c6946b21613f80.jpg?output-format=webp'
+			image: '/images/rest2.JPG'
 		},
 		{
 			id:'3',
@@ -147,7 +147,7 @@ foodieApp.controller('mainController',function($scope){
 			cost: '1000',
 			hours: '12 Noon to 1 AM (Mon-Sun)',
 			phone:'011-43596623',
-			image: 'https://b.zmtcdn.com/data/res_imagery/309705_RESTAURANT_906426943ab0afe7711dc5939a21c234.jpg?output-format=webp'
+			image: '/images/rest3.JPG'
 		},
 		{
 			id:'4',
@@ -160,7 +160,7 @@ foodieApp.controller('mainController',function($scope){
 			cost: '1500',
 			hours: '11 AM to 12 Midnight (Mon-Sun)',
 			phone:'011-33105823',
-			image: 'https://b.zmtcdn.com/data/res_imagery/312300_RESTAURANT_70cd4d8448a38b2d38017a1736a60996.jpg?output-format=webp'
+			image: '/images/rest4.JPG'
 		},
 		{
 			id:'5',
@@ -173,6 +173,6 @@ foodieApp.controller('mainController',function($scope){
 			cost: '1600',
 			hours: '12 Noon to 3:30 PM, 7 PM to 11:30 PM (Mon-Sun)',
 			phone:'011-33105872',
-			image: 'https://b.zmtcdn.com/data/res_imagery/18421051_RESTAURANT_91a8e98f63efbb5d09001e19bf9c31e9.jpg?output-format=webp.jpg'
+			image: '/images/rest5.JPG'
 		}]
 });
