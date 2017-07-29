@@ -1,16 +1,26 @@
 <div class="restaurant" ng-if="restaurant.name" ng-controller="restaurantController">
-  <div class="restaurant-details">
-    <div class="restaurant-image"><img ng-src="{{restaurant.image}}"></div>
-    <div class="restaurant-info">
-      <h2>{{restaurant.name}}</h2>
-      <b>{{restaurant.location}}</b><br>
-      {{restaurant.address}}<hr>
+  <div class="upper-details">
+    <div class="restaurant-img"><img ng-src="{{restaurant.image}}"></div>
+    <div class="restaurant-name">{{restaurant.name}}</div>
+    <div class="restaurant-vote">{{restaurant.vote}}/5</div>
+    <div class="restaurant-location">{{restaurant.location}}●{{restaurant.category}}</div>
+  </div>
+  <div class="lower-details">
+    <div class="restaurant-phone"><strong>Phone Number</strong>
+      <div>{{restaurant.phone}}</div>
     </div>
-    <div class="restaurant-about">
-      <b>Ratings:{{restaurant.vote}}</b><br>
-      Cuisines: {{restaurant.cuisines}}<br>
-      Cost For Two:₹{{restaurant.cost | number}}<br>
-      Timmings:{{restaurant.timmings}}
+    <div class="restaurant-hours"><strong>Opening Hours</strong>
+      <div>{{restaurant.hours}}</div>
+    </div>
+    <div class="restaurant-cuisines"><strong>Cuisines</strong>
+      <div>{{restaurant.cuisines}}</div>
+    </div>
+    <div class="restaurant-address"><strong>Address</strong>
+      <div>{{restaurant.address}}</div>
+    </div>
+    <div class="restaurant-cost"><strong>Cost</strong><br>
+      AVERAGE
+      <div>₹{{restaurant.cost | number}} for two people (approx.)</div>
     </div>
   </div>
 </div>
