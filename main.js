@@ -52,7 +52,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '500',
 				hours: '10 AM to 11 PM (Mon-Sun)',
 				phone: '011-33106219',
-				image: '/images/rest1.jpghttps://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp'
+				image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp'
 			},
 			{
 				name: 'Yeti - The Himalayan Kitchen',
