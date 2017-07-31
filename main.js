@@ -1,4 +1,6 @@
+// store ng-app name in a variable called foodieApp
 var foodieApp = angular.module('foodieApp',['ngRoute']);
+// give control to different pages using urls or route locations
 foodieApp.config(function ($routeProvider) {
 	$routeProvider
 		.when('/',{
@@ -14,11 +16,13 @@ foodieApp.config(function ($routeProvider) {
 			controller: 'restaurantController'
 		})
 })
+// this is a controller of login page
 foodieApp.controller('loginController',function($scope,$location){
 	$scope.goToHome = function() {
 		$location.url('home')
 	}
 });
+// this is a controller of restaurant page
 foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
 	$scope.ingredients = [];
 	$scope.getIngredients = function(url) {
@@ -104,6 +108,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 			}]
 	$scope.restaurant = restaurants[$routeParams.id - 1];
 });
+// this is a controller of main page(home page)
 foodieApp.controller('mainController',function($scope){
 	$scope.restaurants=[
 		{
