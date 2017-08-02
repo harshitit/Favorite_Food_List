@@ -31,7 +31,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 			'method': 'POST',
 			'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
 			'headers': {
-				'Authorization': 'Key YOUR_API_KEY',
+				'Authorization': 'Key e01b5da7ac054f9a9e21f4f9d55632b4',
 				'Content-Type': 'application/json'
 			},
 			'data': data
