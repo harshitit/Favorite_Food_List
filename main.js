@@ -56,7 +56,11 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '500',
 				hours: '10 AM to 11 PM (Mon-Sun)',
 				phone: '011-33106219',
-				image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp'
+				image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp',
+				bestDish: {
+					name: 'THE HAMBURGER',
+					image: 'http://s.eatthis-cdn.com/media/images/ext/690257152/burger-king-ranked-hamburger.jpg'
+				}
 			},
 			{
 				name: 'Yeti - The Himalayan Kitchen',
@@ -68,7 +72,11 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1300',
 				hours: '12 Noon to 11:30 PM (Mon-Sun)',
 				phone:'011-33106044',
-				image: 'https://b.zmtcdn.com/data/res_imagery/18466957_RESTAURANT_8ede6ee959521ff9b2c6946b21613f80.jpg?output-format=webp'
+				image: 'https://b.zmtcdn.com/data/res_imagery/18466957_RESTAURANT_8ede6ee959521ff9b2c6946b21613f80.jpg?output-format=webp',
+				bestDish: {
+					name: 'Tingmo',
+					image: 'https://s-media-cache-ak0.pinimg.com/originals/99/74/13/9974139d6f0d14c3a298b4631862fd36.jpg'
+				}
 			},
 			{
 				name: 'Prime Street Cake',
@@ -92,7 +100,11 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 				cost: '1500',
 				hours: '11 AM to 12 Midnight (Mon-Sun)',
 				phone:'011-33105823',
-				image: 'https://b.zmtcdn.com/data/res_imagery/312300_RESTAURANT_70cd4d8448a38b2d38017a1736a60996.jpg?output-format=webp'
+				image: 'https://b.zmtcdn.com/data/res_imagery/312300_RESTAURANT_70cd4d8448a38b2d38017a1736a60996.jpg?output-format=webp',
+				bestDish: {
+					name: 'Mutton shorba',
+					image: 'https://www.boldsky.com/img/2012/08/16-mutton-shorba-160812.jpg'
+				}
 			},
 			{
 				name: 'Chor Bizarre',
@@ -124,8 +136,8 @@ foodieApp.controller('mainController',function($scope){
 			phone: '011-33106219',
 			image: 'https://b.zmtcdn.com/data/res_imagery/310078_CHAIN_7d80c38935b0a6386685a9ecef8d257c.jpg?output-format=webp',
 			bestDish: {
-				name: 'Corn Pizza',
-				image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
+				name: 'THE HAMBURGER',
+				image: 'http://s.eatthis-cdn.com/media/images/ext/690257152/burger-king-ranked-hamburger.jpg'
 			}
 		},
 		{
@@ -139,7 +151,11 @@ foodieApp.controller('mainController',function($scope){
 			cost: '1300',
 			hours: '12 Noon to 11:30 PM (Mon-Sun)',
 			phone:'011-33106044',
-			image: 'https://b.zmtcdn.com/data/res_imagery/18466957_RESTAURANT_8ede6ee959521ff9b2c6946b21613f80.jpg?output-format=webp'
+			image: 'https://b.zmtcdn.com/data/res_imagery/18466957_RESTAURANT_8ede6ee959521ff9b2c6946b21613f80.jpg?output-format=webp',
+			bestDish: {
+				name: 'Tingmo',
+				image: 'https://s-media-cache-ak0.pinimg.com/originals/99/74/13/9974139d6f0d14c3a298b4631862fd36.jpg'
+			}
 		},
 		{
 			id:'3',
@@ -165,7 +181,11 @@ foodieApp.controller('mainController',function($scope){
 			cost: '1500',
 			hours: '11 AM to 12 Midnight (Mon-Sun)',
 			phone:'011-33105823',
-			image: 'https://b.zmtcdn.com/data/res_imagery/312300_RESTAURANT_70cd4d8448a38b2d38017a1736a60996.jpg?output-format=webp'
+			image: 'https://b.zmtcdn.com/data/res_imagery/312300_RESTAURANT_70cd4d8448a38b2d38017a1736a60996.jpg?output-format=webp',
+			bestDish: {
+				name: 'Mutton shorba',
+				image: 'https://www.boldsky.com/img/2012/08/16-mutton-shorba-160812.jpg'
+			}
 		},
 		{
 			id:'5',
