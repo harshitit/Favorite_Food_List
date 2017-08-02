@@ -162,6 +162,7 @@ h2{
 }
 .restaurant-cuisines{
 	display: inline-block;
+	width: 25%;
 	margin-left: 15%;
 }
 .restaurant-cuisines div{
