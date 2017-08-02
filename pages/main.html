@@ -14,9 +14,6 @@
       Cuisines: {{restaurant.cuisines}}<br>
       Cost For Two:₹{{restaurant.cost | number}}<br>
       Timmings:{{restaurant.timmings}}
-      <div class="bestDish" ng-if="restaurant.bestDish"><small>Recommended:<span>{{restaurant.bestDish.name}} </span>
-	        <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div> </small>
-      </div>
     </div>
   </div>
 </div>
